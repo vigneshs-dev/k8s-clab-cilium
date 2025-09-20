@@ -1,44 +1,14 @@
-# Kubernetes + Containerlab Cilium BGP Lab
 
-# Kubernetes + Containerlab Cilium BGP Lab
+# Cilium BGP Lab with Kubernetes & Bookinfo
 
-This repository provides a comprehensive lab environment for experimenting with Cilium BGP peering, Kubernetes networking, and microservices deployment. It combines network emulation, Kubernetes cluster management, and sample application deployment for learning and testing purposes.
+This repository contains a lab setup for experimenting with Cilium BGP peering, Kubernetes networking, and microservices deployment.
 
-This repository provides a reproducible lab environment for experimenting with Cilium BGP peering, using Kubernetes (Kind), Containerlab, and Cilium.
+## Structure
 
-## Repository Structure
+- `topology/` — Network topology, cluster setup, and Cilium configuration. See `topology/README.md` for details.
+- `bookinfo/` — Sample Bookinfo microservices app for Kubernetes. See `bookinfo/README.md` for deployment instructions.
 
-## Prerequisites
-
-- **topology/**: Contains all files related to the network topology, Kubernetes cluster setup, and Cilium BGP configuration.
-
-  - `Makefile`: Automation for lab setup, teardown, and status checks.Ensure the following tools are installed:
-
-  - `cluster.yaml`: Kind cluster configuration.- [Docker](https://docs.docker.com/engine/install/)
-
-  - `topo.yaml`: Containerlab topology definition.- [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
-
-  - `cilium-bgp-peering-policies.yaml`: Cilium BGP peering policy.- [Containerlab](https://containerlab.dev/install/)
-
-  - `public-pool.yaml`: Cilium IP pool configuration.- [Cilium CLI](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/#install-the-cilium-cli)
-
-  - `netshoot-ds.yaml`: DaemonSet for network troubleshooting.- [kubectl](https://kubernetes.io/docs/tasks/tools/)
-
-  - `usage_cmds.txt`: Useful command references.
-
-  - **clab-bgp-cplane/**: Inventories and data for network automation (Ansible, Nornir) and Containerlab.## Quick Start
-
-
-
-- **bookinfo/**: Sample microservices application for Kubernetes.Clone this repository and run the following command to set up the lab:
-
-  - `README.md`: Instructions for deploying and testing the Bookinfo app.
-
-  - **kustomize/**: Kustomize manifests for deploying Bookinfo.```sh
-
-    - `kustomization.yaml`: Main kustomize file.make
-
-    - **resources/**: Namespace and service definitions for Bookinfo.```
+Refer to the README files in each folder for setup and usage information.
 
 
 
