@@ -33,9 +33,9 @@ tor0:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.3
+    hostname: 172.20.20.4
 tor1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.4
+    hostname: 172.20.20.3

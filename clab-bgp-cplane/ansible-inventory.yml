@@ -20,6 +20,6 @@ all:
         clab-bgp-cplane-server3:
           ansible_host: 
         clab-bgp-cplane-tor0:
-          ansible_host: 172.20.20.3
-        clab-bgp-cplane-tor1:
           ansible_host: 172.20.20.4
+        clab-bgp-cplane-tor1:
+          ansible_host: 172.20.20.3
