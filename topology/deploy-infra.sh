@@ -102,18 +102,42 @@ fi
 print_status "Current node status (NotReady is expected at this stage):"
 kubectl get nodes -owide
 
-# 4. Install Cilium if not already installed
-if ! kubectl get pods -n kube-system -l k8s-app=cilium &>/dev/null; then
+# 4. Check and install Cilium
+print_status "Checking Cilium installation..."
+
+# Multiple checks for Cilium installation
+cilium_installed=false
+if kubectl get daemonset -n kube-system cilium &>/dev/null && \
+   kubectl get deployment -n kube-system cilium-operator &>/dev/null && \
+   kubectl get pods -n kube-system -l k8s-app=cilium &>/dev/null; then
+    if cilium status &>/dev/null; then
+        print_status "Cilium appears to be installed, checking health..."
+        if cilium status | grep -q "OK"; then
+            print_status "Existing Cilium installation is healthy"
+            cilium_installed=true
+        else
+            print_status "Existing Cilium installation is unhealthy, will reinstall"
+        fi
+    fi
+fi
+
+if [ "$cilium_installed" = false ]; then
     print_status "Installing Cilium..."
-    cilium install --version=1.18.1 \
-    --helm-set ipam.mode=kubernetes \
-    --helm-set tunnel-protocol=vxlan \
-    --helm-set ipv4NativeRoutingCIDR="10.0.0.0/8" \
-    --helm-set bgpControlPlane.enabled=true \
-    --helm-set k8s.requireIPv4PodCIDR=true || print_error "Failed to install Cilium"
+    # Cleanup any existing unhealthy installation
+    kubectl delete -n kube-system ds cilium 2>/dev/null || true
+    kubectl delete -n kube-system deploy cilium-operator 2>/dev/null || true
+    kubectl delete -n kube-system pods -l k8s-app=cilium 2>/dev/null || true
+    
+    # Install Cilium
+    if ! cilium install --version=1.18.1 \
+        --helm-set ipam.mode=kubernetes \
+        --helm-set tunnel-protocol=vxlan \
+        --helm-set ipv4NativeRoutingCIDR="10.0.0.0/8" \
+        --helm-set bgpControlPlane.enabled=true \
+        --helm-set k8s.requireIPv4PodCIDR=true; then
+        print_error "Failed to install Cilium"
+    fi
     print_success "Cilium installed successfully"
-else
-    print_status "Cilium is already installed"
 fi
 
 # 5. Wait for Cilium to be ready

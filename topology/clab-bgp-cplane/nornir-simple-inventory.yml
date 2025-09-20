@@ -3,7 +3,7 @@ client0:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.2
+    hostname: 172.20.20.5
 router0:
     username: 
     password: 
@@ -38,4 +38,4 @@ tor1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
+    hostname: 172.20.20.2
