@@ -8,7 +8,7 @@ router0:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
+    hostname: 172.20.20.3
 server0:
     username: 
     password: 
@@ -38,4 +38,4 @@ tor1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.3
+    hostname: 172.20.20.5
