@@ -1,0 +1,50 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+
+# Ignore Ansible and Nornir artifacts
+*.retry
+*.log
+*.bak
+*.tmp
+
+# Ignore SSH keys and sensitive files
+*.pem
+*.key
+authorized_keys
+
+# Ignore Kubernetes and container artifacts
+*.yaml~
+*.yml~
+*.swp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor/project files
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore topology and inventory data
+clab-bgp-cplane/topology-data.json
+clab-bgp-cplane/ansible-inventory.yml
+clab-bgp-cplane/nornir-simple-inventory.yml
+
+# Ignore build artifacts
+*.out
+*.o
+*.so
+*.a
+*.exe
+
+# Ignore Makefile artifacts
+*.d
+*.obj
+*.bin
