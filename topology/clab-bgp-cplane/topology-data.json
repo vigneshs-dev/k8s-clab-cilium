@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-568a4f710415",
+        "bridge": "br-a1c11523b84c",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -16,7 +16,7 @@
       }
     }
   },
-  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5zI131uEuhGNcnlLPYhVX+wfiCxnBC/HlAEc2oK4tSgsqzdnPWLRBiqeeqJzsgMVIA3Bwj8rNKgbZNNH7AiZeyJ7wYe544VGqq5rHj8IzH3B6JqFFan+VddUFpy8MXDIsZ7ig7nJIM9Nj8Xxq2fJ6nWwNXWsnINnug5yMdNZdkZntoDgg7xnLo2mg0x7WTd2eJ6yuP2oDzm5RPATPKRdkNfA3zCNK5xEAskoEQu5MHfFJZ+dYsDRl5XltM7dQ7nJU7dCaLT+H3AnmGvI+w+xkm023TNucdq8inq0UHRDW3Nl4sGOGKEhtAb4v+gZ3lwYMO+FXqGfMluOpk7PRUzY4hwDSvv110UyhQ5uchoi2SIHL9TWSb8XXo9J26fjG30B/nAaq1FNFXiUAvZQj9U06lwK0y1iJAB9Z0/allU4VhRPxaaFrQLzdqSum4lBb9wy9wQwZ6f+bjMUQJx9ygLB9MqxBXPT94HTELPpbxiTVraz+tHHDUce1muPyWKu8mejvKJ14yPYvfoDYZFHdUuU9Uff+679JRIE8FETnZxz+cZFWE1cZisHDynxyIb/BECt0S208naiMgr7byKgeesNINvDOLbQhyYpKwENuJAsKfMKXc+YOxc+NgBOvzAcjz0hvFvDZ+JaDZNwIinBT/mrymmbMCwQalsDxiHVibDA77Q=="],
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5zI131uEuhGNcnlLPYhVX+wfiCxnBC/HlAEc2oK4tSgsqzdnPWLRBiqeeqJzsgMVIA3Bwj8rNKgbZNNH7AiZeyJ7wYe544VGqq5rHj8IzH3B6JqFFan+VddUFpy8MXDIsZ7ig7nJIM9Nj8Xxq2fJ6nWwNXWsnINnug5yMdNZdkZntoDgg7xnLo2mg0x7WTd2eJ6yuP2oDzm5RPATPKRdkNfA3zCNK5xEAskoEQu5MHfFJZ+dYsDRl5XltM7dQ7nJU7dCaLT+H3AnmGvI+w+xkm023TNucdq8inq0UHRDW3Nl4sGOGKEhtAb4v+gZ3lwYMO+FXqGfMluOpk7PRUzY4hwDSvv110UyhQ5uchoi2SIHL9TWSb8XXo9J26fjG30B/nAaq1FNFXiUAvZQj9U06lwK0y1iJAB9Z0/allU4VhRPxaaFrQLzdqSum4lBb9wy9wQwZ6f+bjMUQJx9ygLB9MqxBXPT94HTELPpbxiTVraz+tHHDUce1muPyWKu8mejvKJ14yPYvfoDYZFHdUuU9Uff+679JRIE8FETnZxz+cZFWE1cZisHDynxyIb/BECt0S208naiMgr7byKgeesNINvDOLbQhyYpKwENuJAsKfMKXc+YOxc+NgBOvzAcjz0hvFvDZ+JaDZNwIinBT/mrymmbMCwQalsDxiHVibDA77Q==","ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILXZR8qtsI3z2OLOHfRjFoVZhAHRt56JVJLZuER5rk93"],
   "nodes": {
     "client0": {
       "index": "0",
@@ -29,14 +29,14 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
         "app": "client",
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/client0",
@@ -61,14 +61,14 @@
       "image": "frrouting/frr:v8.2.2",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
         "app": "frr",
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/router0",
@@ -99,7 +99,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/server0",
@@ -130,7 +130,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/server1",
@@ -161,7 +161,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/server2",
@@ -192,7 +192,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/server3",
@@ -217,14 +217,14 @@
       "image": "frrouting/frr:v8.2.2",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
         "app": "frr",
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/tor0",
@@ -249,14 +249,14 @@
       "image": "frrouting/frr:v8.2.2",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.3",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
         "app": "frr",
-        "clab-mgmt-net-bridge": "br-568a4f710415",
+        "clab-mgmt-net-bridge": "br-a1c11523b84c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/vicky/Vicky/Cilium/k8s-clab-cilium/topology/clab-bgp-cplane/tor1",
@@ -276,13 +276,13 @@
       "a": {
         "node": "router0",
         "interface": "net0",
-        "mac": "aa:c1:ab:04:b5:78",
+        "mac": "aa:c1:ab:37:35:c7",
         "peer": "z"
       },
       "z": {
         "node": "tor0",
         "interface": "net0",
-        "mac": "aa:c1:ab:27:5c:f4",
+        "mac": "aa:c1:ab:93:a4:be",
         "peer": "a"
       }
     },
@@ -290,13 +290,13 @@
       "a": {
         "node": "router0",
         "interface": "net1",
-        "mac": "aa:c1:ab:79:ab:3c",
+        "mac": "aa:c1:ab:52:63:d4",
         "peer": "z"
       },
       "z": {
         "node": "tor1",
         "interface": "net0",
-        "mac": "aa:c1:ab:08:4b:80",
+        "mac": "aa:c1:ab:9b:f2:16",
         "peer": "a"
       }
     },
@@ -304,13 +304,13 @@
       "a": {
         "node": "tor0",
         "interface": "net1",
-        "mac": "aa:c1:ab:87:bc:20",
+        "mac": "aa:c1:ab:fc:2f:f1",
         "peer": "z"
       },
       "z": {
         "node": "server0",
         "interface": "net0",
-        "mac": "aa:c1:ab:47:3b:85",
+        "mac": "aa:c1:ab:35:a2:d3",
         "peer": "a"
       }
     },
@@ -318,13 +318,13 @@
       "a": {
         "node": "tor0",
         "interface": "net2",
-        "mac": "aa:c1:ab:34:ca:0a",
+        "mac": "aa:c1:ab:af:26:09",
         "peer": "z"
       },
       "z": {
         "node": "server1",
         "interface": "net0",
-        "mac": "aa:c1:ab:74:14:a0",
+        "mac": "aa:c1:ab:e8:ff:a3",
         "peer": "a"
       }
     },
@@ -332,13 +332,13 @@
       "a": {
         "node": "tor1",
         "interface": "net1",
-        "mac": "aa:c1:ab:34:b2:23",
+        "mac": "aa:c1:ab:18:7c:20",
         "peer": "z"
       },
       "z": {
         "node": "server2",
         "interface": "net0",
-        "mac": "aa:c1:ab:52:d4:5e",
+        "mac": "aa:c1:ab:58:da:15",
         "peer": "a"
       }
     },
@@ -346,13 +346,13 @@
       "a": {
         "node": "tor1",
         "interface": "net2",
-        "mac": "aa:c1:ab:32:29:b2",
+        "mac": "aa:c1:ab:f7:bd:b5",
         "peer": "z"
       },
       "z": {
         "node": "server3",
         "interface": "net0",
-        "mac": "aa:c1:ab:3d:3e:70",
+        "mac": "aa:c1:ab:65:fc:1a",
         "peer": "a"
       }
     },
@@ -360,13 +360,13 @@
       "a": {
         "node": "tor1",
         "interface": "net3",
-        "mac": "aa:c1:ab:bd:e8:92",
+        "mac": "aa:c1:ab:14:91:95",
         "peer": "z"
       },
       "z": {
         "node": "client0",
         "interface": "net0",
-        "mac": "aa:c1:ab:6a:ee:29",
+        "mac": "aa:c1:ab:e5:10:c7",
         "peer": "a"
       }
     }

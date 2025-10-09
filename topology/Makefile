@@ -36,6 +36,16 @@ ippool:
 status:
 	kubectl get pods -n kube-system
 
+clab-ui:
+	docker run -d \
+	--name clab-ui \
+	-p 50080:50080 \
+	-v "$(pwd)/topo.yaml:/topo.yaml" \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	ghcr.io/srl-labs/clab:0.59.0 \
+	containerlab graph -t /topo.yaml
+
+
 conn-test:
 	$(info Starting Cilium connectivity test....)
 	cilium connectivity test
